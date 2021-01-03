@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+a, h1, h2, div{
+    font-family: 'Merriweather', serif;
+}
+
+#main{
+    display: block;
+    width: 100%;
+    height: 755px;
+    background-color: #bbbbbb54;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-content{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1ce6b454;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,1);
+    transition: 3.5s ease-in-out;
+    z-index: 1;
+}
+
+#main-content:hover{
+    box-shadow: none;
+}
+
+#welcome-container{
+    width: 65%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#start-container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#start-btn{
+    width: 100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    background-color: rgba(0,255,183,0);
+    border: 1px solid black;
+    transition: 0.6s ease;
+}
+
+#start-btn:hover{
+    background-color: #bbbbbb54;
+    border: 1px solid #bbbbbb54;
+}
+
+#start-btn a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.image-animation{
+    width: 180px;
+    height: 180px;
+}
+
+.image-animation img{
+    width: 100%;
+    height: 100%;
+}
+
+#rock-animation{
+    position: absolute;
+    left: 200px;    
+    top: 200px;
+    animation-name: move-rock;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    opacity: 0.8;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,0.3);
+}
+
+#paper-animation{
+    position: absolute;
+    left: 1000px;
+    top: 0px;
+    animation-name: move-paper;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    transition: 0.6s ease-in-out;
+    animation-delay: 1.5s;
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,0.3);
+}
+
+#scissors-animation{
+    position: absolute;
+    left: 950px;
+    top: 600px;
+    animation-name: move-scissors;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+    animation-delay: 1.5s;
+    opacity: 0.8;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,0.3);
+}
+
+#zoe-animation{
+    position: absolute;
+    left: 1200px;
+    top: 550px;
+    animation-name: move-zoe;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: 0.5s ease;
+    cursor: crosshair;
+    opacity: 0.8;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,0.3);
+}
+
+#rock-animation:hover{
+    opacity: 0.6;
+}
+
+#paper-animation:hover{
+    opacity: 0.6;
+}
+
+#scissors-animation:hover{
+    opacity: 0.6;
+}
+
+#zoe-animation:hover{
+    opacity: 0.6;
+}
+
+@keyframes move-rock{
+    0%   {left: 0px; top: 200px;}
+    50% {left: 1000px; top: 950px;}
+    51% {left: 2500px; top: 950px;}
+    52% {left: 1800px; top: -10px;}
+    80% {left: 500px; top: 570px;}
+    100% {left: 0px; top: 200px;}
+}
+
+@keyframes move-paper{
+    0%  {left: 1000px; top: 0px;}
+    30% {left: 1600px; top: 550px;}
+    31% {left: 1600px; top: -300px;}
+    32% {left: -300px; top: -300px;}
+    33% {left: -250px; top: 80px;}
+    65% {left: 950px; top: 570px;}
+    85% {left: 1350px; top: 400px;}
+    100% {left: 1000px; top: 0px;}
+}
+
+@keyframes move-scissors{
+    0%  {left: 950px; top: 600px;}
+    45% {left: 0px; top: 160px;}
+    66% {left: 850px; top: -300px;}
+    67% {left: 1700px; top: -300px;}
+    68% {left: 1700px; top: 850px;}
+    69% {left: 150px; top: 850px;}
+    100% {left: 950px; top: 600px;}
+}
+
+@keyframes move-zoe{
+    0%   {left: 1200px; top: 550px;}
+    30% {left: 10px; top: 500px;}
+    50% {left: 1370px; top: 150px;}
+    65% {left: 1100px; top: 10px;}
+    80% {left: 10px; top: 200px;}
+    100% {left: 1200px; top: 550px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#game-form{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1ce6b454;
+    box-shadow: 17px 25px 124px -5px rgba(0,255,183,1);
+    transition: 3.5s ease-in-out;
+    z-index: 1;
+    padding: 20px 20px;
+}
+
+#game-form:hover{
+    box-shadow: none;
+}
+
+#scoreboard-wrapper{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lela-scoreboard{
+    width: 45%;
+    height: 99%;
+    border: 2px solid #F8D210;
+    transition: 1s ease-in-out;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pc-scoreboard{
+    width: 45%;
+    height: 99%;
+    border: 2px solid #F8D210;
+    transition: 1s ease-in-out;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-wrapper{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.image-wrapper{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60%;
+    height: 280px;
+    opacity: 0.9;
+    margin: auto;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+#choices-wrapper{
+    width: 100%;
+    height: 17%;
+    padding: 20px 0px;
+}
+
+#choices-content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rock{
+    width: 32%;
+    height: 90%;
+    text-align: center;
+    line-height: 115px;
+    font-size: 60px;
+    border: 2px solid #F8D210;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+#paper{
+    width: 32%;
+    height: 90%;
+    text-align: center;
+    line-height: 115px;
+    font-size: 60px;
+    border: 2px solid #F8D210;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+#scissors{
+    width: 32%;
+    height: 90%;
+    text-align: center;
+    line-height: 115px;
+    font-size: 60px;
+    border: 2px solid #F8D210;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+#rock:hover{
+    background-color: #bbbbbb54;
+    border-color: #bbbbbb54;
+}
+
+#paper:hover{
+    background-color: #bbbbbb54;
+    border-color: #bbbbbb54;
+}
+
+#scissors:hover{
+    background-color: #bbbbbb54;
+    border-color: #bbbbbb54;
+}
+
+#local-storage{
+    width: 100%;
+    height: 16%;
+    display: flex;
+    padding: 20px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear-storage{
+    width: 30%;
+    height: 60%;
+    border: 2px solid #bbbbbb54;
+    text-align: center;
+    line-height: 60px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+#clear-storage:hover{
+    background-color: #bbbbbb54;
+}
